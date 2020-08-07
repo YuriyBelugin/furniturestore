@@ -1,0 +1,8 @@
+USE furniturestore;
+
+CREATE TABLE brand(
+id INT NOT NULL AUTO_INCREMENT,
+name_brand VARCHAR(255) NOT NULL,
+country VARCHAR(255) NOT NULL,
+PRIMARY KEY(id)
+)
