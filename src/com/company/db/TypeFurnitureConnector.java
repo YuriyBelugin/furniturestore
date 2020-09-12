@@ -1,6 +1,6 @@
 package com.company.db;
 
-import com.company.entity.Brand;
+import com.company.entity.TypeFurniture;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,9 +8,9 @@ import java.sql.SQLException;
 
 
 public class TypeFurnitureConnector {
-    private static final String ADD = "INSERT INTO brand (id, name_brand, country) VALUES(?, ?, ?)";
+    private static final String ADD = "INSERT INTO type_furniture (id, name_furniture, room) VALUES(?, ?, ?)";
 
-    public static void add(Brand brand) throws SQLException {
+    public static void add(TypeFurniture typeFurniture) throws SQLException {
         Connection connection = DbConnector.getConnection();
 
         try (
@@ -18,9 +18,9 @@ public class TypeFurnitureConnector {
         ) {
 
 
-            statement.setInt(1, brand.getId());
-            statement.setString(2, brand.getName_brand());
-            statement.setString(3, brand.getCountry());
+            statement.setInt(1, typeFurniture.getId());
+            statement.setString(2, typeFurniture.getName_furniture());
+            statement.setString(3, typeFurniture.getRoom());
 
             statement.executeUpdate();
         }

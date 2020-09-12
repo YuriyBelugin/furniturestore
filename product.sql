@@ -3,9 +3,9 @@ USE furniturestore;
 CREATE TABLE product(
 id INT NOT NULL AUTO_INCREMENT,
 name_furniture_id INT NOT NULL,
-weight VARCHAR(255) NOT NULL,
+weight INT NOT NULL,
 quantity_store INT NOT NULL,
-heigt INT NOT NULL,
+height INT NOT NULL,
 width INT NOT NULL,
 type_furniture VARCHAR(255) NOT NULL,
 name_brand_id INT NOT NULL,
