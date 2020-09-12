@@ -32,5 +32,14 @@ public class Main {
 //                e.printStackTrace();
 //            }
 //        }
+
+        for (Brand brand1 : brand){
+            try {
+                TypeFurnitureConnector.add(brand1);
+            }catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 }
