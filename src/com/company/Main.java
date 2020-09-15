@@ -1,11 +1,16 @@
 package com.company;
 
+import com.company.db.BrandConnector;
 import com.company.db.FullInfoConnector;
 import com.company.db.ProductConnector;
 import com.company.db.TypeFurnitureConnector;
 import com.company.dto.FullInfoDto;
+import com.company.entity.Brand;
 import com.company.entity.Product;
+import com.company.entity.TypeFurniture;
+import com.company.reader.BrandReader;
 import com.company.reader.ProductReader;
+import com.company.reader.TypeFurnitureReader;
 import com.company.writer.FullInfoWriter;
 
 import java.io.IOException;
