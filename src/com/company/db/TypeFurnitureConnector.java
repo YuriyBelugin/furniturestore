@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 
 public class TypeFurnitureConnector {
-    private static final String ADD = "INSERT INTO type_furniture (id, name_furniture, room) VALUES(?, ?, ?)";
+    private static final String ADD = "INSERT INTO typefurniture (id, name_furniture, room) VALUES(?, ?, ?)";
 
     public static void add(TypeFurniture typeFurniture) throws SQLException {
         Connection connection = DbConnector.getConnection();
@@ -16,7 +16,6 @@ public class TypeFurnitureConnector {
         try (
             PreparedStatement statement = connection.prepareStatement(ADD)
         ) {
-
 
             statement.setInt(1, typeFurniture.getId());
             statement.setString(2, typeFurniture.getName_furniture());
